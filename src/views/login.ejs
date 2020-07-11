@@ -1,0 +1,33 @@
+<%- include('includes/head') %>
+<div class="login_form shadow-sm bg-white p-3">
+  <header><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <h6 class="text-success">
+      KNIGHTS OF ST.JOHN INTERNATIONAL AND LADIES AUXILIARY
+    </h6>
+  </header>
+  <div class="text-center alert-warning"><%= message %></div>
+  <form action="/login" method="post">
+    <div class="form-group">
+      <label for="">Enter Commandery/Auxiliary ID</label>
+      <input
+        class="form-control"
+        type="text"
+        name="registrationId"
+        id="registrationId"
+      />
+    </div>
+    <div class="form-group">
+      <label for="">Enter password</label>
+      <input
+        class="form-control"
+        type="password"
+        name="password"
+        id="password"
+      />
+    </div>
+    <div>
+      <button class="btn-block btn-success btn" type="submit">Log in</button>
+    </div>
+  </form>
+</div>
+<%-include('includes/end.ejs')%>

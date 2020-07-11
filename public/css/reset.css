@@ -1,0 +1,119 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #02aab0;
+  background: -webkit-linear-gradient(to right, #02aab0, #00cdac);
+  background: linear-gradient(to right, #02aab0, #00cdac);
+}
+
+header {
+  font-family: 'Cinzel', serif;
+  text-align: center;
+  padding: 20px;
+  text-transform: capitalize;
+  color: #fff;
+}
+
+.pers-data,
+.emp-data,
+.position,
+.rank,
+.history,
+.marriage,
+.sacremental {
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: 'Questrial', sans-serif;
+}
+
+.pers-data h5,
+.emp-data h5,
+.position h5,
+.rank h5,
+.history h5,
+.marriage h5,
+.sacremental h5 {
+  font-family: 'Cinzel', serif;
+}
+
+#section-title {
+  text-align: center;
+}
+
+/* homepage css */
+
+.homepage {
+  width: 100%;
+  margin: 20vh auto;
+  color: #fff;
+}
+
+.err-page-main {
+  width: 100%;
+  height: 100%;
+  margin: 50px auto;
+}
+
+.homepage .welcome-note {
+  font-family: 'Cinzel', serif;
+}
+
+.homepage .welcome-note .btn {
+  width: 100%;
+  margin: 10px;
+  font: inherit;
+  border: 2px solid #fff;
+  padding: 10px;
+  color: #fff;
+  background: transparent;
+  cursor: pointer;
+}
+
+.login_form {
+  width: 350px;
+  margin: 25vh auto;
+}
+
+.member-img {
+  width: 40px;
+  height: 40px;
+}
+
+.homepage .welcome-note .btn:hover {
+  -webkit-box-shadow: 0px 0px 24px -4px rgba(89, 91, 102, 1);
+  -moz-box-shadow: 0px 0px 24px -4px rgba(89, 91, 102, 1);
+  box-shadow: 0px 0px 24px -4px rgba(89, 91, 102, 1);
+}
+
+.welcome-message {
+  height: 100vh;
+}
+
+.submit-btn {
+  width: 300px;
+  height: 100px;
+}
+
+.submit-btn button {
+  border: 2px solid #02aab0;
+  background: #02aab0;
+  color: #fff;
+}
+
+.submit-btn button:hover {
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+}
+
+#addHonourBtn,
+#addChildBtn,
+#addPositionBtn {
+  color: #fff;
+}
+
+#modal-table {
+  font-family: 'Questrial', sans-serif;
+}

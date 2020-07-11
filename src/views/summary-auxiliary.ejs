@@ -1,0 +1,53 @@
+<%- include('includes/head.ejs') %>
+<body>
+  <%- include('includes/navigation.ejs') %>
+  <header>
+    <h3>KNIGHTS OF ST.JOHN INTERNATIONAL AND LADIES AUXILIARY</h3>
+    <h4>ACCRA WEST GRAND COMMANDERY AND LADIES AUXILIARY</h4>
+    <hr />
+  </header>
+  <div>
+    <h3 style="text-align: center; font-family: 'Cinzel', serif;">
+      Summary of Auxiliary data
+    </h3>
+    <table id="summary-table-auxiliary" class="bg-white">
+      <thead>
+        <tr>
+          <th>Registration ID</th>
+          <th>Title</th>
+          <th>Surname</th>
+          <th>Other names</th>
+          <th>Parish</th>
+          <th>Auxiliary number</th>
+          <th>Date of birth</th>
+          <th>Place of birth</th>
+          <th>Telephone</th>
+          <th>Email</th>
+          <th>Region</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% members.forEach((member, index) => { %>
+        <tr>
+          <td><%=member.registration_id%></td>
+          <td><%=member.title%></td>
+          <td><%=member.surname%></td>
+          <td><%=member.othername%></td>
+          <td><%=member.parish%></td>
+          <td><%=member.auxiliary_no%></td>
+          <td><%=member.dob%></td>
+          <td><%=member.place_of_birth%></td>
+          <td><%=member.cellphone%></td>
+          <td><%=member.email%></td>
+          <td><%=member.region%></td>
+        </tr>
+        <%})%>
+      </tbody>
+    </table>
+  </div>
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.dataTables.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/dataTables.bootstrap.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+</body>

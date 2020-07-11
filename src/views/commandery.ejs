@@ -1,0 +1,398 @@
+<%- include('includes/head.ejs') %>
+
+<body>
+  <%- include('includes/navigation.ejs') %>
+  <header>
+    <h4 class="animated fadeInUp">KNIGHTS OF ST.JOHN INTERNATIONAL</h4>
+    <h5 class="animated fadeInUp">ACCRA WEST GRAND COMMANDERY </h5>
+    <hr>
+    <h5 class="animated fadeInUp" id="division-title">Commandery Registration</h5>
+  </header>
+  <div>
+    <form id="formCommandery" method="post" enctype="multipart/form-data" class="container">
+      <!-- personal data -->
+      <div class="pers-data shadow p-3 mb-5 bg-white rounded">
+        <h5 id="section-title">Personal information</h5>
+        <hr>
+        <div style="text-align: center">
+          <div class="form-group row col-md-12">
+            <div style="margin: 40px auto" class="form-group col-md-6">
+              <label>Upload your Image</label>
+              <input type="file" name="imageUpld" onchange="uploadedImage(event)" required>
+            </div>
+            <div style="padding: 10px" class="container col-md-6">
+              <img id="uploaded_image" src="/assets/public-img/profile.png" alt="profile image" width="150px"
+                height="150px" />
+            </div>
+          </div>
+
+          <div class="col-md-12 form-group row">
+            <div class="col-md-4">
+              <label for="">Accra Grand</label>
+              <select class="form-control" id="area-selection" name="accra_area" onchange="funcRegistrationComm()"
+                required>
+                <option selected disabled>Select your Grand</option>
+                <option value="Accra West">Accra West</option>
+                <option value="Accra East">Accra East</option>
+              </select>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="commandary">Commandery number: </label>
+              <input value="" class="form-control" id="commandery_id" type="text" name="commandery_no" required>
+            </div>
+            <div class="col-md-4">
+              <label for="number">Registration ID: </label>
+              <p class="display_registration_id"><%=registrationId%></p>
+              <input type="hidden" value="<%=registrationId%>" id="registration_field" name="regis_id">
+            </div>
+          </div>
+
+        </div>
+
+        <div class="form-group row col-md-12">
+          <div class="form-group col-md-6">
+            <label>Title: </label>
+            <select id="title" class="form-control" name="title" required>
+              <option selected disabled>Select title</option>
+              <option>Mr.</option>
+              <option>Dr.</option>
+              <option>Prof.</option>
+            </select>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="surname">Gender: </label>
+            <select class="form-control" name="gender" id="gender" required>
+              <option selected disabled>Select gender</option>
+              <option>Male</option>
+              <option disabled>Female</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group row col-md-12">
+          <div class="form-group col-md-6">
+            <label for="surname">Surname: </label>
+            <input id="surname" class="form-control" type="text" name="surname" required>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="other names">Other names: </label>
+            <input id="other_names" class="form-control" type="text" name="other_names" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="parish">Parish: </label>
+          <input id="parish" class="form-control" type="text" name="parish" required>
+        </div>
+
+        <div class="form-group col-md-12 row">
+          <div class="form-group col-md-6">
+            <label for="dob">Date of birth: </label>
+            <input class="form-control" type="date" name="dob" id="dob" required>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="place">Place of birth: </label>
+            <input class="form-control" type="text" name="place_of_birth" id="pob" required>
+          </div>
+        </div>
+        <div class="form-group row col-md-12">
+          <div class="form-group col-md-4">
+            <label for="nationality">Nationality: </label>
+            <input class="form-control" type="text" name="nationality" id="nationality" required>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="postal">Postal Address: </label>
+            <input class="form-control" type="text" name="postal_address" id="postal_address" required>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="residential">Residential Address: </label>
+            <input class="form-control" type="text" name="residential_address" id="residential_address" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col">
+            <label for="telephone">Telephone number: </label>
+            <input class="form-control" type="tel" name="telephone" id="telephone" required>
+          </div>
+          <div class="form-group col">
+            <label for="cell">Cell phone: </label>
+            <input class="form-control" type="tel" name="cellphone" id="cellphone" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email: </label>
+          <input class="form-control" type="email" name="email" id="email" required>
+        </div>
+        <div class="form-group">
+          <label for="Hometown Address">Hometown: </label>
+          <input class="form-control" type="text" name="hometown" id="hometown" required>
+        </div>
+        <div class="form-group">
+          <label for="Region">Region: </label>
+          <select class="form-control" name="region" id="region" required>
+            <option selected disabled>Select region</option>
+            <option>Upper West</option>
+            <option>Upper East</option>
+            <option>Northern</option>
+            <option>Bono Region</option>
+            <option>Ashanti</option>
+            <option>Eastern</option>
+            <option>Western</option>
+            <option>Volta</option>
+            <option>Central</option>
+            <option>Oti Region</option>
+            <option>Bono East Region</option>
+            <option>Ahafo Region</option>
+            <option>North East Region</option>
+            <option>Savannah Region</option>
+            <option>Western North Region</option>
+            <option>Greater Accra</option>
+          </select>
+        </div>
+      </div>
+      <!-- employment data -->
+      <div class="emp-data shadow p-3 mb-5 bg-white rounded">
+        <h5 id="section-title">Employment Data</h5>
+        <hr>
+        <div class="form-group">
+          <label for="occupation-status">Occupation status: </label>
+          <select name="occ_status" class="form-control" id="occupational_status">
+            <option selected disabled>Select one</option>
+            <option>Employed</option>
+            <option>Unemployed</option>
+            <option>Retired</option>
+            <option>Student</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="profession">Profession: </label>
+          <select name="profession" class="form-control" id="profession">
+            <option selected disabled>Select one</option>
+            <option value="Education">Education</option>
+            <option value="Banking">Banking/Finance/Accounting</option>
+            <option value="Construction">Construction</option>
+            <option value="Insurance">Insurance</option>
+            <option value="Hospitality">Hospitality/Catering</option>
+            <option value="Administration">Administration</option>
+            <option value="Beautician">Beautician/Hairdressing/Fashion Designing</option>
+            <option value="Medical">Medical</option>
+            <option value="Civil Service">Civil Service</option>
+            <option value="Sales">Sales/Marketing</option>
+            <option value="Farming">Farming</option>
+            <option value="Other">Other</option>
+
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="place_of_work">Place of work: </label>
+          <input class="form-control" type="text" name="place_of_work" id="place_of_work">
+        </div>
+        <div class="form-group">
+          <label for="work address">Work Address: </label>
+          <input class="form-control" type="text" name="work_address" id="work_address">
+        </div>
+        <div class="form-group">
+          <label for="profession">Phone (Office): </label>
+          <input class="form-control" type="tel" name="office_phone" id="office_phone">
+        </div>
+      </div>
+      <!-- position held -->
+     <<div class="position shadow p-3 mb-5 bg-white rounded">
+        <h5 id="section-title">Positions held</h5>
+        <hr>
+        <div>
+          <div>
+            <div class="pos-form" id=pos-form>
+              <div class="form-row col-md-12">
+                <div class="form-group col-md-3">
+                  <label for="">Position: </label>
+                  <select name="position_1" class="form-control" id="position_1">
+                    <option selected disabled>Select</option>
+                    <option>Local Commandery</option>
+                    <option>District</option>
+                    <option>Grand</option>
+                    <option>Supr. Sub</option>
+                    <option>Supreme</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-3">
+                  <label for="">Position held: </label>
+                  <input class="form-control" type="text" name="position_supr1" id="held_1">
+                </div>
+                <div class="form-group col-md-3">
+                  <label for="">From: </label>
+                  <input class="form-control" type="date" name="from_1" id="from_1">
+                </div>
+                <div class="form-group col-md-3">
+                  <label for="">To: </label>
+                  <input class="form-control" type="date" name="to_1" id="to_1">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button id="addPositionBtn" type="submit" onclick="addNewPositionCommandery(event)" class="btn bg-primary bg-success">Add
+          position</button>
+      </div>
+      <!-- commandery history -->
+      <div class="history shadow p-3 mb-5 bg-white rounded">
+        <h5 id="section-title">Commandery History</h5>
+        <hr>
+        <div>
+          <div class="form-group col">
+            <label for="">Date of initiation: </label>
+            <input class="form-control" type="date" name="doi" id="doi">
+          </div>
+
+        </div>
+        <div class="form-row">
+          <div class="form-group col">
+            <label for="">Commandery of initiation name: </label>
+            <input class="form-control" type="text" name="commandery_of_initiation" id="coi_name">
+          </div>
+          <div class="form-group col">
+            <label for="">Commandery of initiation number: </label>
+            <input class="form-control" type="text" name="init_no" id="coi_number">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group col">
+            <label for="">Name of Commandery transferred to: </label>
+            <input class="form-control" type="text" name="comm_transferred" id="comm_transferred">
+          </div>
+          <div class="form-group col">
+            <label for="">Number of Commandery transferred to: </label>
+            <input class="form-control" type="number" name="no_of_comm_transferred" id="num_of_comm_transferred">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group col">
+            <label for="">Date 2nd/3rd Degree: </label>
+            <input class="form-control" type="date" name="second_degree" id="degree_2">
+          </div>
+          <div class="form-group col">
+            <label for="">Date 4th Degree: </label>
+            <input class="form-control" type="date" name="fourth_degree" id="degree_4">
+          </div>
+          <div class="form-group col">
+            <label for="">Date 5th Degree: </label>
+            <input class="form-control" type="date" name="date_other" id="degree_5">
+          </div>
+        </div>
+        <hr>
+        <div>
+          <div>
+            <div id="honour" class="row">
+              <div class="form-group col">
+                <label for="">Honor</label>
+                <input class="form-control" type="text" name="honour_1" id="honour_1">
+              </div>
+              <div class="form-group col">
+                <label for="">Date of honor</label>
+                <input class="form-control" type="date" name="date_1" id="doh_1">
+              </div>
+            </div>
+          </div>
+        </div>
+        <button id="addHonourBtn" type="submit" onclick="addNewHonour(event)" class="btn bg-primary bg-success">Add
+          honour</button>
+      </div>
+      <!-- marriage data-->
+      <div class="marriage shadow p-3 mb-5 bg-white rounded">
+        <h5 id="section-title">Marriage and Family Details: </h5>
+        <hr>
+        <div class="row">
+          <div class="form-group col">
+            <label for="">Marital status: </label>
+            <select class="form-control" type="text" name="marriage_status" id="marriage_status">
+              <option selected disabled>Select</option>
+              <option>Married</option>
+              <option>Single</option>
+              <option>Widowed</option>
+            </select>
+          </div>
+
+          <div class="form-group col">
+            <label for="">Date of marriage: </label>
+            <input class="form-control" type="date" name="date_of_marriage" id="date_of_marriage">
+          </div>
+        </div>
+        <div>
+          <div class="form-group col">
+            <label for="">Name of spouse: </label>
+            <input class="form-control" type="text" name="spouse" id="name_of_spouse">
+          </div>
+          <div class="form-group col">
+            <label for="">Type of marriage: </label>
+            <select class="form-control" type="text" name="marriage_type" id="marriage_type">
+              <option selected disabled>Select</option>
+              <option>Customary</option>
+              <option>Ordinance</option>
+              <option>Holy Matrimony</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div id="child_id">
+              <div class="form-group col">
+                <label for="">Child 1</label>
+                <input class="form-control" type="text" name="child_1" placeholder="child's name" id="child_1">
+              </div>
+              <div class="form-group col">
+                <label for=""> Date of birth of Child 1</label>
+                <input class="form-control" type="date" name="dob_of_child_1" id="dob_of_child_1">
+              </div>
+            </div>
+          </div>
+        </div>
+        <button id="addChildBtn" type="submit" onclick="addNewChild(event)" class="btn bg-success">Add another
+          child</button>
+      </div>
+      <!-- sacremental data -->
+      <div class="sacremental shadow p-3 mb-5 bg-white rounded">
+        <h5 id="section-title">Sacramental Data: </h5>
+        <hr>
+        <div class="form-group col">
+          <label for=""> Date of Baptism</label>
+          <input class="form-control" type="date" name="date_baptism" id="date_of_baptism">
+        </div>
+
+        <div class="form-group col">
+          <label for=""> Date of First Communion</label>
+          <input class="form-control" type="date" name="first_communion" id="date_of_communion">
+        </div>
+
+        <div class="form-group col">
+          <label for=""> Date of Confirmation</label>
+          <input class="form-control" type="date" name="date_confirmation" id="date_of_confirmation">
+        </div>
+        <div>
+          <div class="form-group ">
+            <label for="">Service in Parish: </label>
+            <select class="form-control" type="text" name="service_parish" id="service_parish">
+              <option selected disabled>Select</option>
+              <option>Usher</option>
+              <option>Children</option>
+              <option>St.Vincent de paul</option>
+              <option>Lector</option>
+              <option>Prisons Ministry</option>
+              <option>Choir</option>
+              <option>Church Bulletin</option>
+              <option>Catechist</option>
+              <option>Eucharistic Minister</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="container submit-btn">
+        <button type="button" class="btn btn-secondary btn-lg btn-block" data-toggle="modal"
+          data-target="#confirmation_modal_commandery" id="submission-btn-commandery">View before submit</button>
+      </div>
+    </form>
+    <%-include('includes/review-modal-commandery.ejs')%>
+  </div>
+  <%-include('includes/end.ejs')%>
