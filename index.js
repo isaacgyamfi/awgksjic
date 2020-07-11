@@ -4,14 +4,15 @@ const fileUpload = require('express-fileupload');
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const MySQLStore = require('express-mysql-session')(session);
+require('dotenv').config();
 
 const app = express();
 
 const sessionStore = new MySQLStore({
   host: 'localhost',
-  user: 'awgksjic_awgksjic',
-  password: 'Cudjoe_233',
-  database: 'awgksjic_awgksjic',
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
   schema: {
     tableName: 'session',
     columNames: {
@@ -25,10 +26,10 @@ const sessionStore = new MySQLStore({
 const homeRoutes = require('./src/routes/home');
 const memberRoutes = require('./src/routes/member');
 const adminRoutes = require('./src/routes/admin');
-const port = 3000;
+const port = process.env.PORT;
 
 app.set('view engine', 'ejs');
-app.set('views', 'views');
+app.set('views', 'src/views');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(fileUpload());
@@ -36,7 +37,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(
   session({
     key: 'session_key',
-    secret: 'somesecretyouliketo',
+    secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
     store: sessionStore,
