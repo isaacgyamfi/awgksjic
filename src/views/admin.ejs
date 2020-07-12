@@ -1,28 +1,31 @@
-<%- include('includes/head') %>
-<div class="login_form shadow-sm bg-white p-3">
-  <header>
-    <h6 class="text-success">
-      KNIGHTS OF ST.JOHN INTERNATIONAL AND LADIES AUXILIARY
-    </h6>
-  </header>
-  <div class="text-center alert-warning"><%= message %></div>
-  <form action="/admin" method="post">
-    <div class="form-group">
-      <label for="">Email</label>
-      <input class="form-control" type="email" name="email" id="email" />
-    </div>
-    <div class="form-group">
-      <label for="">Password:</label>
-      <input
-        class="form-control"
-        type="password"
-        name="password"
-        id="password"
-      />
-    </div>
-    <div>
-      <button class="btn-block btn-success btn" type="submit">Log in</button>
-    </div>
-  </form>
-</div>
-<%-include('includes/end.ejs')%>
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('includes/head') %>
+  <div class="login_form shadow-sm bg-white p-3">
+    <header>
+      <h6 class="text-success">
+        KNIGHTS OF ST.JOHN INTERNATIONAL AND LADIES AUXILIARY
+      </h6>
+    </header>
+    <div class="text-center alert-warning"><%= message %></div>
+    <form action="/admin" method="post">
+      <div class="form-group">
+        <label for="">Email</label>
+        <input class="form-control" type="email" name="email" id="email" />
+      </div>
+      <div class="form-group">
+        <label for="">Password:</label>
+        <input
+          class="form-control"
+          type="password"
+          name="password"
+          id="password"
+        />
+      </div>
+      <div>
+        <button class="btn-block btn-success btn" type="submit">Log in</button>
+      </div>
+    </form>
+  </div>
+  <%-include('includes/end.ejs')%>
+</html>

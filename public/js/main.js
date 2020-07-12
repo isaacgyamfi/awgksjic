@@ -1,10 +1,10 @@
-$(document).ready(function() {
+$(document).ready(function () {
   $('#summary-table-auxiliary').DataTable();
 });
-$(document).ready(function() {
+$(document).ready(function () {
   $('#summary-table-commandery').DataTable();
 });
-$('#submission-btn-commandery').click(function() {
+$('#submission-btn-commandery').click(function () {
   $('#commandery_idMod').text($('#commandery_id').val());
   $('#titleMod').text($('#title').val());
   $('#genderMod').text($('#gender').val());
@@ -84,13 +84,13 @@ $('#submission-btn-commandery').click(function() {
   $('#service_parishMod').text($('#service_parish').val());
 });
 
-$('#submit').click(function() {
+$('#submit').click(function () {
   $('#formCommandery').submit();
   alert('You have successfully been registered');
   window.location.href = '/';
 });
 
-$('#submission-btn-auxiliary').click(function() {
+$('#submission-btn-auxiliary').click(function () {
   $('#auxiliary_idMod').text($('#commandery_id').val());
   $('#titleMod').text($('#title').val());
   $('#surnameMod').text($('#surname').val());
@@ -170,13 +170,13 @@ $('#submission-btn-auxiliary').click(function() {
   $('#service_parishMod').text($('#service_parish').val());
 });
 
-$('#submit').click(function() {
+$('#submit').click(function () {
   $('#formAuxiliary').submit();
   alert('You have successfully been registered');
   window.location.href = '/';
 });
 
-let uploadedImage = event => {
+let uploadedImage = (event) => {
   let reader = new FileReader();
   reader.onload = () => {
     let output = document.getElementById('uploaded_image');
@@ -192,11 +192,15 @@ function addNewHonour(event) {
   event.preventDefault();
   let honourDivCount = honourDiv.parentElement.parentElement.childElementCount;
   let newHonourDiv = document.createElement('div');
-  newHonourDiv.innerHTML = `<div id="honour" class="row"><div class="form-group col"><label for="">Honor ${honourDivCount +
-    1}</label><input class="form-control" type="text" id="honour_${honourDivCount +
-    1}" name="honour_${honourDivCount +
-    1}"></div><div class="form-group col"><label for="">Date of honor</label><input class="form-control" type="date" id="doh_${honourDivCount +
-    1}" name="date_${honourDivCount + 1}"></div></div>`;
+  newHonourDiv.innerHTML = `<div id="honour" class="row"><div class="form-group col"><label for="">Honor ${
+    honourDivCount + 1
+  }</label><input class="form-control" type="text" id="honour_${
+    honourDivCount + 1
+  }" name="honour_${
+    honourDivCount + 1
+  }"></div><div class="form-group col"><label for="">Date of honor</label><input class="form-control" type="date" id="doh_${
+    honourDivCount + 1
+  }" name="date_${honourDivCount + 1}"></div></div>`;
   honourDiv.parentNode.parentNode.append(newHonourDiv);
   if (honourDivCount >= 4) {
     honourBtn.style = 'display: none;';
@@ -210,12 +214,17 @@ function addNewChild(event) {
   event.preventDefault();
   let childDivCount = childDiv.parentElement.parentElement.childElementCount;
   let newchildDiv = document.createElement('div');
-  newchildDiv.innerHTML = `<div id="child_id"><div class="form-group col"><label for="">Child ${childDivCount +
-    1}</label><input class="form-control" type="text" id="child_${childDivCount +
-    1}" name="child_${childDivCount +
-    1}" placeholder="child's name"></div><div class="form-group col"><label for=""> Date of birth of Child ${childDivCount +
-    1}</label><input class="form-control" id="dob_child_${childDivCount +
-    1}" type="date" name="dob_of_child_${childDivCount + 1}"></div></div>`;
+  newchildDiv.innerHTML = `<div id="child_id"><div class="form-group col"><label for="">Child ${
+    childDivCount + 1
+  }</label><input class="form-control" type="text" id="child_${
+    childDivCount + 1
+  }" name="child_${
+    childDivCount + 1
+  }" placeholder="child's name"></div><div class="form-group col"><label for=""> Date of birth of Child ${
+    childDivCount + 1
+  }</label><input class="form-control" id="dob_child_${
+    childDivCount + 1
+  }" type="date" name="dob_of_child_${childDivCount + 1}"></div></div>`;
   childDiv.parentNode.parentNode.append(newchildDiv);
   if (childDivCount >= 4) {
     childBtn.style = 'display: none;';
@@ -234,9 +243,9 @@ function addNewPositionAuxiliary(event) {
             <div class="form-row col-md-12">
             <div class="form-group col-md-3">
                 <label for="">Position: </label>
-                <select name="position_${positionDivCount +
-                  1}" class="form-control" id="position_${positionDivCount +
-    1}">
+                <select name="position_${
+                  positionDivCount + 1
+                }" class="form-control" id="position_${positionDivCount + 1}">
                 <option selected disabled>Select</option>
                 <option>Local Auxiliary</option>
                 <option>District</option>
@@ -247,18 +256,21 @@ function addNewPositionAuxiliary(event) {
             </div>
             <div class="form-group col-md-3">
                 <label for="">Position held: </label>
-                <input class="form-control" type="text" name="position_supr${positionDivCount +
-                  1}" id="held_${positionDivCount + 1}">
+                <input class="form-control" type="text" name="position_supr${
+                  positionDivCount + 1
+                }" id="held_${positionDivCount + 1}">
             </div>
             <div class="form-group col-md-3">
                 <label for="">From: </label>
-                <input class="form-control" type="date" name="from_${positionDivCount +
-                  1}" id="from_${positionDivCount + 1}">
+                <input class="form-control" type="date" name="from_${
+                  positionDivCount + 1
+                }" id="from_${positionDivCount + 1}">
             </div>
             <div class="form-group col-md-3">
                 <label for="">To: </label>
-                <input class="form-control" type="date" name="to_${positionDivCount +
-                  1}" id="to_${positionDivCount + 1}">
+                <input class="form-control" type="date" name="to_${
+                  positionDivCount + 1
+                }" id="to_${positionDivCount + 1}">
             </div>
             </div>
         </div>`;
@@ -277,9 +289,9 @@ function addNewPositionCommandery(event) {
             <div class="form-row col-md-12">
             <div class="form-group col-md-3">
                 <label for="">Position: </label>
-                <select name="position_${positionDivCount +
-                  1}" class="form-control" id="position_${positionDivCount +
-    1}">
+                <select name="position_${
+                  positionDivCount + 1
+                }" class="form-control" id="position_${positionDivCount + 1}">
                 <option selected disabled>Select</option>
                 <option>Local Commandery</option>
                 <option>District</option>
@@ -290,18 +302,21 @@ function addNewPositionCommandery(event) {
             </div>
             <div class="form-group col-md-3">
                 <label for="">Position held: </label>
-                <input class="form-control" type="text" name="position_supr${positionDivCount +
-                  1}" id="held_${positionDivCount + 1}">
+                <input class="form-control" type="text" name="position_supr${
+                  positionDivCount + 1
+                }" id="held_${positionDivCount + 1}">
             </div>
             <div class="form-group col-md-3">
                 <label for="">From: </label>
-                <input class="form-control" type="date" name="from_${positionDivCount +
-                  1}" id="from_${positionDivCount + 1}">
+                <input class="form-control" type="date" name="from_${
+                  positionDivCount + 1
+                }" id="from_${positionDivCount + 1}">
             </div>
             <div class="form-group col-md-3">
                 <label for="">To: </label>
-                <input class="form-control" type="date" name="to_${positionDivCount +
-                  1}" id="to_${positionDivCount + 1}">
+                <input class="form-control" type="date" name="to_${
+                  positionDivCount + 1
+                }" id="to_${positionDivCount + 1}">
             </div>
             </div>
         </div>`;

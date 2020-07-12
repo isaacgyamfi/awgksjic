@@ -1,21 +1,29 @@
-<%- include('includes/head') %>
-<body>
-  <div class="homepage container">
-    <div class="welcome-note">
-      <h4 class="animated fadeInUp text-center">Welcome to the</h4>
-      <h2 class="animated fadeInUp text-center">
-        ACCRA WEST GRAND KNIGHTS AND LADIES AUXILARY
-      </h2>
-      <h3 class="animated fadeInUp text-center">Register here</h3>
-      <div class="col-md-12 row">
-        <div class="col-md-6 animated fadeInLeft">
-          <a href="/commandery"><button class="btn">Commandery</button></a>
-        </div>
-        <div class="col-md-6 animated fadeInRight">
-          <a href="/auxiliary"><button class="btn">Auxiliary</button></a>
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('includes/head') %>
+  <body>
+    <div class="homepage mt-5">
+      <div class="shadow-sm p-3 bg-secondary">
+        <h5 class="text-center">
+          Welcome to the ACCRA WEST GRAND KNIGHTS AND LADIES AUXILARY
+        </h5>
+        <h4 class="text-center mb-5">Register here</h4>
+        <div class="row mt-5">
+          <div class="col-md-6">
+            <a href="/commandery"
+              ><button class="btn btn-block bg-white mt-2">
+                Commandery
+              </button></a
+            >
+          </div>
+          <div class="col-md-6">
+            <a href="/auxiliary"
+              ><button class="btn btn-block bg-white mt-2">Auxiliary</button></a
+            >
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</body>
-<%-include('includes/end.ejs')%>
+  </body>
+  <%-include('includes/end.ejs')%>
+</html>

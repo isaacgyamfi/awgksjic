@@ -14,6 +14,10 @@ header {
   color: #fff;
 }
 
+a {
+  text-decoration: none !important;
+}
+
 .pers-data,
 .emp-data,
 .position,
@@ -45,30 +49,21 @@ header {
 /* homepage css */
 
 .homepage {
-  width: 100%;
-  margin: 20vh auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homepage div {
+  max-width: 400px;
   color: #fff;
+  font-family: 'Cinzel', serif;
 }
 
 .err-page-main {
   width: 100%;
   height: 100%;
   margin: 50px auto;
-}
-
-.homepage .welcome-note {
-  font-family: 'Cinzel', serif;
-}
-
-.homepage .welcome-note .btn {
-  width: 100%;
-  margin: 10px;
-  font: inherit;
-  border: 2px solid #fff;
-  padding: 10px;
-  color: #fff;
-  background: transparent;
-  cursor: pointer;
 }
 
 .login_form {

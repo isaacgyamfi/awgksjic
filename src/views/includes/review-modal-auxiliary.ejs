@@ -1,314 +1,330 @@
-<div class="modal fade" id="confirmation_modal_auxiliary" tabindex="-1" role="dialog" aria-labelledby=""
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-scrollable" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="">Confirm submission</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="table-responsive">
-                    <table id="modal-table" class="table table-striped">
-                        <tr>
-                            <th>Personal Data</th>
-                        </tr>
-                        <tr>
-                            <th>Auxiliary number</th>
-                            <td id="auxiliary_idMod"></td>
-                        </tr>
+<div
+  class="modal fade"
+  id="confirmation_modal_auxiliary"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby=""
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="">Confirm submission</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="table-responsive-sm">
+          <table id="modal-table" class="table">
+            <tr>
+              <th>Personal Data</th>
+            </tr>
+            <tr>
+              <th>Auxiliary number</th>
+              <td id="auxiliary_idMod"></td>
+            </tr>
 
-                        <tr>
-                            <th>Title</th>
-                            <td id="titleMod"></td>
-                        </tr>
-                        <tr>
-                            <th>Surname</th>
-                            <td id="surnameMod"></td>
-                        </tr>
-                        <tr>
-                            <th>Gender</th>
-                            <td id="genderMod"></td>
-                        </tr>
-                        <tr>
-                            <th>Other names</th>
-                            <td id="other_namesMod"></td>
-                        </tr>
-                        <tr>
-                            <th>Parish</th>
-                            <td id="parishMod"></td>
-                        </tr>
-                        <tr>
-                            <th>Date of birth</th>
-                            <td id="dobMod"></td>
-                        </tr>
-                        <tr>
-                            <th>Place of birth</th>
-                            <td id="pobMod"></td>
-                        </tr>
-                        <tr>
-                            <th>Nationality</th>
-                            <td id="nationalityMod"></td>
-                        </tr>
-                        <tr>
-                            <th>Postal address</th>
-                            <td id="postal_addressMod"></td>
-                        </tr>
-                        <tr>
-                            <th>Residential address</th>
-                            <td id="residential_addressMod"></td>
-                        </tr>
-                        <tr>
-                            <th>Telephone</th>
-                            <td id="telephoneMod"></td>
-                        </tr>
-                        <tr>
-                            <th>Cellphone</th>
-                            <td id="cellphoneMod"></td>
-                        </tr>
-                        <tr>
-                            <th>Email</th>
-                            <td id="emailMod"></td>
-                        </tr>
-                        <tr>
-                            <th>Hometown</th>
-                            <td id="hometownMod"></td>
-                        </tr>
-                        <tr>
-                            <th>Region</th>
-                            <td id="regionMod"></td>
-                        </tr>
+            <tr>
+              <th>Title</th>
+              <td id="titleMod"></td>
+            </tr>
+            <tr>
+              <th>Surname</th>
+              <td id="surnameMod"></td>
+            </tr>
+            <tr>
+              <th>Gender</th>
+              <td id="genderMod"></td>
+            </tr>
+            <tr>
+              <th>Other names</th>
+              <td id="other_namesMod"></td>
+            </tr>
+            <tr>
+              <th>Parish</th>
+              <td id="parishMod"></td>
+            </tr>
+            <tr>
+              <th>Date of birth</th>
+              <td id="dobMod"></td>
+            </tr>
+            <tr>
+              <th>Place of birth</th>
+              <td id="pobMod"></td>
+            </tr>
+            <tr>
+              <th>Nationality</th>
+              <td id="nationalityMod"></td>
+            </tr>
+            <tr>
+              <th>Postal address</th>
+              <td id="postal_addressMod"></td>
+            </tr>
+            <tr>
+              <th>Residential address</th>
+              <td id="residential_addressMod"></td>
+            </tr>
+            <tr>
+              <th>Telephone</th>
+              <td id="telephoneMod"></td>
+            </tr>
+            <tr>
+              <th>Cellphone</th>
+              <td id="cellphoneMod"></td>
+            </tr>
+            <tr>
+              <th>Email</th>
+              <td id="emailMod"></td>
+            </tr>
+            <tr>
+              <th>Hometown</th>
+              <td id="hometownMod"></td>
+            </tr>
+            <tr>
+              <th>Region</th>
+              <td id="regionMod"></td>
+            </tr>
 
-                        <tr>
-                            <th>Employment Data</th>
-                        </tr>
+            <tr>
+              <th>Employment Data</th>
+            </tr>
 
-                        <tr>
-                            <th>Occupational status</th>
-                            <td id="occupational_statusMod"></td>
-                        </tr>
-                        <tr>
-                            <th>Profession</th>
-                            <td id="professionMod"></td>
-                        </tr>
-                        <tr>
-                            <th>Place of work</th>
-                            <td id="place_of_workMod"></td>
-                        </tr>
-                        <tr>
-                            <th>Work address</th>
-                            <td id="work_addressMod"></td>
-                        </tr>
-                        <tr>
-                            <th>Phone(Office)</th>
-                            <td id="office_phoneMod"></td>
-                        </tr>
+            <tr>
+              <th>Occupational status</th>
+              <td id="occupational_statusMod"></td>
+            </tr>
+            <tr>
+              <th>Profession</th>
+              <td id="professionMod"></td>
+            </tr>
+            <tr>
+              <th>Place of work</th>
+              <td id="place_of_workMod"></td>
+            </tr>
+            <tr>
+              <th>Work address</th>
+              <td id="work_addressMod"></td>
+            </tr>
+            <tr>
+              <th>Phone(Office)</th>
+              <td id="office_phoneMod"></td>
+            </tr>
 
-                        <tr>
-                            <th>Position Data</th>
-                        </tr>
+            <tr>
+              <th>Position Data</th>
+            </tr>
 
-                        <tr>
-                            <th>Position</th>
-                            <td id="position_1Mod"></td>
-                            <td id="held_1Mod"></td>
-                            <td id="from_1Mod"></td>
-                            <td id="to_1Mod"></td>
-                        </tr>
-                        <tr>
-                            <th>Position</th>
-                            <td id="position_2Mod"></td>
-                            <td id="held_2Mod"></td>
-                            <td id="from_2Mod"></td>
-                            <td id="to_2Mod"></td>
-                        </tr>
-                        <tr>
-                            <th>Position</th>
-                            <td id="position_3Mod"></td>
-                            <td id="held_3Mod"></td>
-                            <td id="from_3Mod"></td>
-                            <td id="to_3Mod"></td>
-                        </tr>
-                        <tr>
-                            <th>Position</th>
-                            <td id="position_4Mod"></td>
-                            <td id="held_4Mod"></td>
-                            <td id="from_4Mod"></td>
-                            <td id="to_4Mod"></td>
-                        </tr>
-                        <tr>
-                            <th>Position</th>
-                            <td id="position_5Mod"></td>
-                            <td id="held_5Mod"></td>
-                            <td id="from_5Mod"></td>
-                            <td id="to_5Mod"></td>
-                        <tr>
-                            <th>Auxiliary History Data</th>
-                        </tr>
+            <tr>
+              <th>Position</th>
+              <td id="position_1Mod"></td>
+              <td id="held_1Mod"></td>
+              <td id="from_1Mod"></td>
+              <td id="to_1Mod"></td>
+            </tr>
+            <tr>
+              <th>Position</th>
+              <td id="position_2Mod"></td>
+              <td id="held_2Mod"></td>
+              <td id="from_2Mod"></td>
+              <td id="to_2Mod"></td>
+            </tr>
+            <tr>
+              <th>Position</th>
+              <td id="position_3Mod"></td>
+              <td id="held_3Mod"></td>
+              <td id="from_3Mod"></td>
+              <td id="to_3Mod"></td>
+            </tr>
+            <tr>
+              <th>Position</th>
+              <td id="position_4Mod"></td>
+              <td id="held_4Mod"></td>
+              <td id="from_4Mod"></td>
+              <td id="to_4Mod"></td>
+            </tr>
+            <tr>
+              <th>Position</th>
+              <td id="position_5Mod"></td>
+              <td id="held_5Mod"></td>
+              <td id="from_5Mod"></td>
+              <td id="to_5Mod"></td>
+            </tr>
 
-                        <tr>
-                            <th>Date of initiation</th>
-                            <td id="doiMod"></td>
-                        </tr>
-                        <tr>
-                            <th>Auxiliary of initiation name</th>
-                            <td id="aoi_nameMod"></td>
-                        </tr>
-                        <tr>
-                            <th>Auxiliary of initiation number</th>
-                            <td id="aoi_numberMod"></td>
-                        </tr>
-                        <tr>
-                            <th>Name of auxiliary transferred to</th>
-                            <td id="auxi_transferredMod"></td>
-                        </tr>
-                        <tr>
-                            <th>Number of auxiliary transferred to</th>
-                            <td id="num_of_auxi_transferredMod"></td>
-                        </tr>
-                        <tr>
-                            <th>Date 2nd/3rd Degree</th>
-                            <td id="degree_2Mod"></td>
-                        </tr>
-                        <tr>
-                            <th>Date 4th Degree</th>
-                            <td id="degree_4Mod"></td>
-                        </tr>
-                        <tr>
-                            <th>Date 5th Degree</th>
-                            <td id="degree_5Mod"></td>
-                        </tr>
-                        <tr>
-                            <th>Honor</th>
-                            <td id="honour_1Mod"></td>
-                        </tr>
-                        <tr>
-                            <th>Date of honour</th>
-                            <td id="doh_1Mod"></td>
-                        </tr>
-                        <tr>
-                            <th>Honor</th>
-                            <td id="honour_2Mod"></td>
-                        </tr>
-                        <tr>
-                            <th>Date of honour</th>
-                            <td id="doh_2Mod"></td>
-                        </tr>
-                        <tr>
-                            <th>Honor</th>
-                            <td id="honour_3Mod"></td>
-                        </tr>
-                        <tr>
-                            <th>Date of honour</th>
-                            <td id="doh_3Mod"></td>
-                        </tr>
-                        <tr>
-                            <th>Honor</th>
-                            <td id="honour_4Mod"></td>
-                        </tr>
-                        <tr>
-                            <th>Date of honour</th>
-                            <td id="doh_4Mod"></td>
-                        </tr>
-                        <tr>
-                            <th>Honor</th>
-                            <td id="honour_5Mod"></td>
-                        </tr>
-                        <tr>
-                            <th>Date of honour</th>
-                            <td id="doh_5Mod"></td>
-                        </tr>
+            <tr>
+              <th>Auxiliary History Data</th>
+            </tr>
 
-                        <tr>
-                            <th>Marriage and Family details</th>
-                        </tr>
+            <tr>
+              <th>Date of initiation</th>
+              <td id="doiMod"></td>
+            </tr>
+            <tr>
+              <th>Auxiliary of initiation name</th>
+              <td id="aoi_nameMod"></td>
+            </tr>
+            <tr>
+              <th>Auxiliary of initiation number</th>
+              <td id="aoi_numberMod"></td>
+            </tr>
+            <tr>
+              <th>Name of auxiliary transferred to</th>
+              <td id="auxi_transferredMod"></td>
+            </tr>
+            <tr>
+              <th>Number of auxiliary transferred to</th>
+              <td id="num_of_auxi_transferredMod"></td>
+            </tr>
+            <tr>
+              <th>Date 2nd/3rd Degree</th>
+              <td id="degree_2Mod"></td>
+            </tr>
+            <tr>
+              <th>Date 4th Degree</th>
+              <td id="degree_4Mod"></td>
+            </tr>
+            <tr>
+              <th>Date 5th Degree</th>
+              <td id="degree_5Mod"></td>
+            </tr>
+            <tr>
+              <th>Honor</th>
+              <td id="honour_1Mod"></td>
+            </tr>
+            <tr>
+              <th>Date of honour</th>
+              <td id="doh_1Mod"></td>
+            </tr>
+            <tr>
+              <th>Honor</th>
+              <td id="honour_2Mod"></td>
+            </tr>
+            <tr>
+              <th>Date of honour</th>
+              <td id="doh_2Mod"></td>
+            </tr>
+            <tr>
+              <th>Honor</th>
+              <td id="honour_3Mod"></td>
+            </tr>
+            <tr>
+              <th>Date of honour</th>
+              <td id="doh_3Mod"></td>
+            </tr>
+            <tr>
+              <th>Honor</th>
+              <td id="honour_4Mod"></td>
+            </tr>
+            <tr>
+              <th>Date of honour</th>
+              <td id="doh_4Mod"></td>
+            </tr>
+            <tr>
+              <th>Honor</th>
+              <td id="honour_5Mod"></td>
+            </tr>
+            <tr>
+              <th>Date of honour</th>
+              <td id="doh_5Mod"></td>
+            </tr>
 
-                        <tr>
-                            <th>Marriage status</th>
-                            <td id="marriage_statusMod"></td>
-                        </tr>
-                        <tr>
-                            <th>Date of marriage</th>
-                            <td id="date_of_marriageMod"></td>
-                        </tr>
-                        <tr>
-                            <th>Name of spouse</th>
-                            <td id="name_of_spouseMod"></td>
-                        </tr>
-                        <tr>
-                            <th>Type of marriage</th>
-                            <td id="type_of_marriageMod"></td>
-                        </tr>
-                        <tr>
-                            <th>Child 1</th>
-                            <td id="child_1Mod"></td>
-                        </tr>
-                        <tr>
-                            <th>Date of birth of Child 1</th>
-                            <td id="dob_child_1Mod"></td>
-                        </tr>
-                        <tr>
-                            <th>Child 2</th>
-                            <td id="child_2Mod"></td>
-                        </tr>
-                        <tr>
-                            <th>Date of birth of Child 2</th>
-                            <td id="dob_child_2Mod"></td>
-                        </tr>
-                        <tr>
-                            <th>Child 3</th>
-                            <td id="child_3Mod"></td>
-                        </tr>
-                        <tr>
-                            <th>Date of birth of Child 3</th>
-                            <td id="dob_child_3Mod"></td>
-                        </tr>
-                        <tr>
-                            <th>Child 4</th>
-                            <td id="child_4Mod"></td>
-                        </tr>
-                        <tr>
-                            <th>Date of birth of Child 4</th>
-                            <td id="dob_child_4Mod"></td>
-                        </tr>
-                        <tr>
-                            <th>Child 5</th>
-                            <td id="child_5Mod"></td>
-                        </tr>
-                        <tr>
-                            <th>Date of birth of Child 5</th>
-                            <td id="dob_child_5Mod"></td>
-                        </tr>
+            <tr>
+              <th>Marriage and Family details</th>
+            </tr>
 
-                        <tr>
-                            <th>Sacremental Data</th>
-                        </tr>
+            <tr>
+              <th>Marriage status</th>
+              <td id="marriage_statusMod"></td>
+            </tr>
+            <tr>
+              <th>Date of marriage</th>
+              <td id="date_of_marriageMod"></td>
+            </tr>
+            <tr>
+              <th>Name of spouse</th>
+              <td id="name_of_spouseMod"></td>
+            </tr>
+            <tr>
+              <th>Type of marriage</th>
+              <td id="type_of_marriageMod"></td>
+            </tr>
+            <tr>
+              <th>Child 1</th>
+              <td id="child_1Mod"></td>
+            </tr>
+            <tr>
+              <th>Date of birth of Child 1</th>
+              <td id="dob_child_1Mod"></td>
+            </tr>
+            <tr>
+              <th>Child 2</th>
+              <td id="child_2Mod"></td>
+            </tr>
+            <tr>
+              <th>Date of birth of Child 2</th>
+              <td id="dob_child_2Mod"></td>
+            </tr>
+            <tr>
+              <th>Child 3</th>
+              <td id="child_3Mod"></td>
+            </tr>
+            <tr>
+              <th>Date of birth of Child 3</th>
+              <td id="dob_child_3Mod"></td>
+            </tr>
+            <tr>
+              <th>Child 4</th>
+              <td id="child_4Mod"></td>
+            </tr>
+            <tr>
+              <th>Date of birth of Child 4</th>
+              <td id="dob_child_4Mod"></td>
+            </tr>
+            <tr>
+              <th>Child 5</th>
+              <td id="child_5Mod"></td>
+            </tr>
+            <tr>
+              <th>Date of birth of Child 5</th>
+              <td id="dob_child_5Mod"></td>
+            </tr>
 
-                        <tr>
-                            <th>Date of baptism</th>
-                            <td id="date_of_baptismMod"></td>
-                        </tr>
-                        <tr>
-                            <th>Date of first communion</th>
-                            <td id="date_of_communionMod"></td>
-                        </tr>
-                        <tr>
-                            <th>Date of confirmation</th>
-                            <td id="date_of_confirmationMod"></td>
-                        </tr>
-                        <tr>
-                            <th>Service in parish</th>
-                            <td id="service_parishMod"></td>
-                        </tr>
+            <tr>
+              <th>Sacremental Data</th>
+            </tr>
 
-                    </table>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button id="submit" type="button" class="btn btn-success">Submit data</button>
-            </div>
+            <tr>
+              <th>Date of baptism</th>
+              <td id="date_of_baptismMod"></td>
+            </tr>
+            <tr>
+              <th>Date of first communion</th>
+              <td id="date_of_communionMod"></td>
+            </tr>
+            <tr>
+              <th>Date of confirmation</th>
+              <td id="date_of_confirmationMod"></td>
+            </tr>
+            <tr>
+              <th>Service in parish</th>
+              <td id="service_parishMod"></td>
+            </tr>
+          </table>
         </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          Close
+        </button>
+        <button id="submit" type="button" class="btn btn-success">
+          Submit data
+        </button>
+      </div>
     </div>
+  </div>
 </div>

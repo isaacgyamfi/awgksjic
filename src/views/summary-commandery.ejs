@@ -1,13 +1,17 @@
-<%- include('includes/head.ejs') %>
-<body>
-  <%- include('includes/navigation.ejs') %>
-  <header>
-    <h3>KNIGHTS OF ST.JOHN INTERNATIONAL AND LADIES AUXILIARY</h3>
-    <h4>ACCRA WEST GRAND COMMANDERY AND LADIES AUXILIARY</h4>
-    <hr />
-  </header>
-  <div>
-  <h3 style="text-align: center; font-family: 'Cinzel', serif;">Summary of Commandery data</h3>
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('includes/head.ejs') %>
+  <body>
+    <%- include('includes/navigation.ejs') %>
+    <header>
+      <h3>KNIGHTS OF ST.JOHN INTERNATIONAL AND LADIES AUXILIARY</h3>
+      <h4>ACCRA WEST GRAND COMMANDERY AND LADIES AUXILIARY</h4>
+      <hr />
+    </header>
+    <div>
+      <h3 style="text-align: center; font-family: 'Cinzel', serif;">
+        Summary of Commandery data
+      </h3>
       <table id="summary-table-commandery" class="bg-white">
         <thead>
           <tr>
@@ -42,13 +46,11 @@
           <%})%>
         </tbody>
       </table>
-  </div>
-
-</body>
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/jquery.dataTables.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/dataTables.bootstrap.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
-
+    </div>
+  </body>
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.dataTables.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/dataTables.bootstrap.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
 </html>
