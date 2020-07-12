@@ -9,7 +9,7 @@ require('dotenv').config();
 const app = express();
 
 const sessionStore = new MySQLStore({
-  host: 'localhost',
+  host: 'localhost:3306',
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
@@ -21,6 +21,7 @@ const sessionStore = new MySQLStore({
       data: 'data',
     },
   },
+  port: 3306,
 });
 
 const homeRoutes = require('./src/routes/home');
