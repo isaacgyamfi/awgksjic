@@ -1,4 +1,4 @@
-const User = require('../models/user');
+const db = require('../utils/database');
 module.exports = {
   getHomePage: (req, res) => {
     res.render('welcome', {
@@ -22,19 +22,21 @@ module.exports = {
   postLogin: (req, res) => {
     const registrationId = req.body.registrationId;
     const password = req.body.password;
-    const userExist = User.findOne({ registrationId, password });
-
-    if (!userExist) {
-      return res.render('login', {
-        path: '/login',
-        pageTitle: 'Login',
-        message: 'Wrong Registration ID ',
-      });
-    } else {
-      req.session.isLoggedIn = true;
-      req.session.registrationId = registrationId;
-      console.log(req.session);
-      res.redirect('/register');
-    }
+    const query = `SELECT * FROM registration WHERE registration.registrationId="${registrationId}" AND registration.password="${password}"`;
+    db.query(query, (err, result) => {
+      console.log(err);
+      if (result[0] === undefined) {
+        return res.render('login', {
+          path: '/login',
+          pageTitle: 'Login',
+          message: 'Wrong Registration ID ',
+        });
+      } else {
+        req.session.isLoggedIn = true;
+        req.session.registrationId = registrationId;
+        console.log(req.session);
+        res.redirect('/register');
+      }
+    });
   },
 };
