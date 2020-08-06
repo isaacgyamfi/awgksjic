@@ -112,3 +112,21 @@ a {
 #modal-table {
   font-family: 'Questrial', sans-serif;
 }
+
+/* admin dashboard */
+
+.custom-tab {
+  display: inline-flex;
+}
+
+.custom-tab-item {
+  padding: 10px;
+  border: 2px solid transparent;
+  list-style: none;
+  font-weight: 500;
+}
+
+.custom-tab-item:hover {
+  border-bottom: 2px solid #6C757D;
+  cursor: pointer;
+}

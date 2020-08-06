@@ -4,23 +4,86 @@
 
   <body>
     <%- include('includes/navigation.ejs') %>
-    <header>
+    <!-- <header>
       <h3>KNIGHTS OF ST.JOHN INTERNATIONAL AND LADIES AUXILIARY</h3>
       <h4>ACCRA WEST GRAND COMMANDERY AND LADIES AUXILIARY</h4>
       <hr />
-    </header>
-    <div class="container">
-      <div class="row col-md-12">
-        <div class="col-md-6">
-          <div class="bg-white p-3 m-3 rounded shadow-sm">
-            <a href="/summary-commandery">Commandery summary</a>
+    </header> -->
+    <div class="container-fluid">
+      <div class="sidebar row">
+        <div class="col-md-3 h-auto p-2">
+          <div style="height: 570px;" class="p-3 bg-white shadow-sm">
+            <div class="profile d-flex flex-row">
+              <div class="avatar">
+                <img
+                  src="../assets/public-img/profile.png"
+                  class="img-responsive img-circle rounded-circle"
+                  height="50"
+                  width="50"
+                  alt="pp"
+                />
+              </div>
+              <div class="avatar p-2">
+                <p style="font-weight: bold;">Isaac Gyamfi</p>
+                <p style="font-weight: 100;">frimpongi50@gmail.com</p>
+              </div>
+            </div>
+            <ul class="p-0">
+              <li class="list-unstyled m-2">
+                <button class="btn btn-block btn-outline-secondary">
+                  Registration
+                </button>
+              </li>
+              <li class="list-unstyled m-2">
+                <button class="btn btn-block btn-outline-secondary">
+                  Summary
+                </button>
+              </li>
+              <li class="list-unstyled m-2">
+                <button class="btn btn-block btn-outline-secondary">
+                  Account setting
+                </button>
+              </li>
+              <li class="list-unstyled m-2">
+                <button class="btn btn-block btn-danger">
+                  Logout
+                </button>
+              </li>
+            </ul>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="bg-white p-3 m-3 rounded shadow-sm">
-            <a class="text-decoration-none" href="/summary-auxiliary"
-              >Auxiliary summary</a
-            >
+        <div class="col-md-9 p-2">
+          <div style="height: 570px;" class="p-3 bg-white shadow-sm">
+            <span class="badge badge-secondary p-2">
+              Registration
+            </span>
+            <div>
+              <ul class="p-0 custom-tab">
+                <li class="custom-tab-item">New registrations</li>
+                <li class="custom-tab-item">Confirmed</li>
+                <li class="custom-tab-item">Rejected</li>
+              </ul>
+            </div>
+            <div>
+              <table id="summary-table-commandery" class="bg-white">
+                <thead>
+                  <tr>
+                    <th>Title</th>
+                    <th>Other names</th>
+                    <th>Registration ID</th>
+                    <th>Surname</th>
+                    <th>Parish</th>
+                    <th>Commandery number</th>
+                    <th>Date of birth</th>
+                    <th>Place of birth</th>
+                    <th>Telephone</th>
+                    <th>Email</th>
+                    <th>Region</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>

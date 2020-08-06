@@ -21,10 +21,17 @@ module.exports = {
   },
   postLogin: (req, res) => {
     const registrationId = req.body.registrationId;
-    const password = req.body.password;
-    const userExist = User.findOne({ registrationId, password });
+    const email = req.body.email;
+
+    const userExist = User.findOne({ registrationId, email });
 
     if (!userExist) {
+      // check if the user is commandery or auxiliary
+
+      // If commandery
+
+      // else
+
       return res.render('login', {
         path: '/login',
         pageTitle: 'Login',
