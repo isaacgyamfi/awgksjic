@@ -23,4 +23,7 @@ module.exports = {
       res.redirect('/auxiliary');
     }
   },
+  getHistory: (req, res) => {
+    res.render('history');
+  },
 };
