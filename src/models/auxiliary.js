@@ -1,3 +1,7 @@
+const mongoose = require('mongoose');
+
+const Schema = mongoose.Schema;
+
 const auxiliarySchema = new Schema({
   id: String,
   registration_id: String,

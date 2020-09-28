@@ -1,3 +1,7 @@
+const mongoose = require('mongoose');
+
+const Schema = mongoose.Schema;
+
 const commanderySchema = new Schema({
   registration_id: String,
   picture: String,

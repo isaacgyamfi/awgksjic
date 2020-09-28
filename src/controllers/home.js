@@ -1,4 +1,3 @@
-const db = require('../utils/database');
 module.exports = {
   getHome: (req, res) => {
     res.render('index', {
@@ -16,21 +15,12 @@ module.exports = {
   postLogin: (req, res) => {
     const registrationId = req.body.registrationId;
     const password = req.body.password;
-    const query = `SELECT * FROM registration WHERE registration.registrationId="${registrationId}" AND registration.password="${password}"`;
-    db.query(query, (err, result) => {
-      console.log(err);
-      if (result[0] === undefined) {
-        return res.render('login', {
-          path: '/login',
-          pageTitle: 'Login',
-          message: 'Wrong Registration ID ',
-        });
-      } else {
-        req.session.isLoggedIn = true;
-        req.session.registrationId = registrationId;
-        console.log(req.session);
-        res.redirect('/register');
-      }
-    });
+    const membershipType = req.body.membershipType;
+
+    if (membershipType == 'Commandery') {
+      res.redirect('/commandery');
+    } else {
+      res.redirect('/auxiliary');
+    }
   },
 };
