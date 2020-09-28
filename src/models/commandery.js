@@ -108,4 +108,5 @@ const commanderySchema = new Schema({
   service_parish: String,
 });
 
-module.exports = mongoose.model('Commandery', commanderySchema);
+module.exports =
+  mongoose.models.Commandery || mongoose.model('Commandery', commanderySchema);

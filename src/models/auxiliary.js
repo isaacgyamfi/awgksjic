@@ -107,4 +107,5 @@ const auxiliarySchema = new Schema({
   service_parish: String,
 });
 
-module.exports = mongoose.model('Auxiliary', auxiliarySchema);
+module.exports =
+  mongoose.models.Auxiliary || mongoose.model('Auxiliary', auxiliarySchema);

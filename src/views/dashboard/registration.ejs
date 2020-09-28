@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../includes/head.ejs') %>
+  <body>
+    <%- include('../includes/navigation.ejs') %>
+    <%-include('../includes/registration-modal.ejs')%>
+    <div class="container-fluid">
+      <div class="sidebar row">
+        <div class="col-md-2 h-auto p-2">
+          <div class="p-3 bg-white shadow-sm">
+            <div class="profile">
+              <div class="avatar">
+                <img
+                  src="../assets/public-img/profile.png"
+                  class="img-responsive img-circle rounded-circle"
+                  height="50"
+                  width="50"
+                  alt="pp"
+                />
+              </div>
+              <div class="py-2">
+                <p class="m-0" style="font-weight: bold">Isaac Gyamfi</p>
+                <p class="m-0">frimpongi50@gmail.com</p>
+              </div>
+            </div>
+            <hr />
+            <ul class="p-0">
+              <a href="/admin/registration">
+                <li class="list-unstyled m-2">Registration</li>
+              </a>
+              <a href="/admin/summary">
+                <li class="list-unstyled m-2">Summary</li>
+              </a>
+              <a href="/admin/accounts">
+                <li class="list-unstyled m-2">Account setting</li>
+              </a>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-10 p-2">
+          <div style="height: 570px" class="p-3 bg-white shadow-sm">
+            <span class="badge badge-secondary p-2"> Registration </span>
+            <div>
+              <ul class="p-0 custom-tab">
+                <li class="custom-tab-item">New registrations</li>
+                <li class="custom-tab-item">Confirmed</li>
+                <li class="custom-tab-item">Rejected</li>
+              </ul>
+            </div>
+            <div>
+              <table
+                class="bg-white table table-responsive table-hover table-sm"
+              >
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Name</th>
+                    <th>Number</th>
+                    <th>Parish</th>
+                    <th>Date of birth</th>
+                    <th>Place of birth</th>
+                    <th>Telephone</th>
+                    <th>Email</th>
+                    <th>Region</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mr.</td>
+                    <td>Emmanuel Johnson</td>
+                    <td>457</td>
+                    <td>St. Thomas</td>
+                    <td>19/04/86</td>
+                    <td>Twapease</td>
+                    <td>0576621657</td>
+                    <td>frimpongi50@gmail.com</td>
+                    <td>Ashanti</td>
+                    <td class="d-flex flex-row">
+                      <button
+                        class="btn btn-sm btn-primary rounded"
+                        data-toggle="modal"
+                        data-target="#new-registration"
+                      >
+                        <i class="fa fa-eye" aria-hidden="true"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

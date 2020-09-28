@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('includes/head') %> <%- include('includes/navigation') %>
+  <div
+    style="max-width: 600px; margin: 30px auto"
+    class="shadow-sm bg-white p-4"
+  >
+    <header>
+      <h6 class="text-success">
+        KNIGHTS OF ST.JOHN INTERNATIONAL AND LADIES AUXILIARY
+      </h6>
+      <h5 class="text-success">Administrator's account registration</h5>
+    </header>
+    <hr />
+    <div class="text-center alert-warning"><%= message %></div>
+    <form action="/admin/signup" method="post">
+      <div class="row">
+        <div class="col-md-6 form-group">
+          <label for="firstname">First name</label>
+          <input
+            class="form-control"
+            type="text"
+            name="firstname"
+            id="firstname"
+          />
+        </div>
+        <div class="col-md-6 form-group">
+          <label for="lastname">First name</label>
+          <input
+            class="form-control"
+            type="text"
+            name="lastname"
+            id="lastname"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 form-group">
+          <label for="adminMembershipNumber">Membership ID</label>
+          <input
+            class="form-control"
+            type="number"
+            name="adminMembershipNumber"
+            id="adminMembershipNumber"
+          />
+        </div>
+        <div class="col-md-4 form-group">
+          <label for="adminMembershipType">Membership Type</label>
+          <input
+            class="form-control"
+            type="text"
+            name="adminMembershipType"
+            id="adminMembershipType"
+          />
+        </div>
+        <div class="col-md-4 form-group">
+          <label for="position">Position</label>
+          <input
+            class="form-control"
+            type="text"
+            name="position"
+            id="position"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-7 form-group">
+          <label for="email">Email</label>
+          <input class="form-control" type="email" name="email" id="email" />
+        </div>
+        <div class="col-md-5 form-group">
+          <label for="adminPhone">Phone</label>
+          <input
+            class="form-control"
+            type="text"
+            name="adminPhone"
+            id="adminPhone"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 form-group">
+          <label for="password">Password:</label>
+          <input
+            class="form-control"
+            type="password"
+            name="password"
+            id="password"
+          />
+        </div>
+        <div class="col-md-6 form-group">
+          <label for="confirmPassword">Confirm password:</label>
+          <input
+            class="form-control"
+            type="password"
+            name="confirmPassword"
+            id="confirmPassword"
+          />
+        </div>
+      </div>
+      <div>
+        <button class="btn-block btn-success btn" type="submit">
+          Create an account
+        </button>
+      </div>
+    </form>
+  </div>
+  <%-include('includes/end.ejs')%>
+</html>

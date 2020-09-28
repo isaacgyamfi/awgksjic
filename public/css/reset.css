@@ -9,9 +9,11 @@ body {
 header {
   font-family: 'Cinzel', serif;
   text-align: center;
-  padding: 20px;
+  padding: 10px;
   text-transform: capitalize;
-  color: #fff;
+}
+header h5 {
+  font-weight: bold;
 }
 
 a {

@@ -1,19 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <%- include('includes/head.ejs') %>
-
   <body>
     <%- include('includes/navigation.ejs') %>
-    <!-- <header>
-      <h3>KNIGHTS OF ST.JOHN INTERNATIONAL AND LADIES AUXILIARY</h3>
-      <h4>ACCRA WEST GRAND COMMANDERY AND LADIES AUXILIARY</h4>
-      <hr />
-    </header> -->
+    <%-include('includes/registration-modal.ejs')%>
     <div class="container-fluid">
       <div class="sidebar row">
-        <div class="col-md-3 h-auto p-2">
-          <div style="height: 570px;" class="p-3 bg-white shadow-sm">
-            <div class="profile d-flex flex-row">
+        <div class="col-md-2 h-auto p-2">
+          <div class="p-3 bg-white shadow-sm">
+            <div class="profile">
               <div class="avatar">
                 <img
                   src="../assets/public-img/profile.png"
@@ -23,66 +18,103 @@
                   alt="pp"
                 />
               </div>
-              <div class="avatar p-2">
-                <p style="font-weight: bold;">Isaac Gyamfi</p>
-                <p style="font-weight: 100;">frimpongi50@gmail.com</p>
+              <div class="py-2">
+                <p class="m-0" style="font-weight: bold">Isaac Gyamfi</p>
+                <p class="m-0">frimpongi50@gmail.com</p>
               </div>
             </div>
+            <hr />
             <ul class="p-0">
-              <li class="list-unstyled m-2">
-                <button class="btn btn-block btn-outline-secondary">
-                  Registration
-                </button>
-              </li>
-              <li class="list-unstyled m-2">
-                <button class="btn btn-block btn-outline-secondary">
-                  Summary
-                </button>
-              </li>
-              <li class="list-unstyled m-2">
-                <button class="btn btn-block btn-outline-secondary">
-                  Account setting
-                </button>
-              </li>
-              <li class="list-unstyled m-2">
-                <button class="btn btn-block btn-danger">
-                  Logout
-                </button>
-              </li>
+              <a href="/admin/registration">
+                <li class="list-unstyled m-2">Registration</li>
+              </a>
+              <a href="/admin/summary">
+                <li class="list-unstyled m-2">Summary</li>
+              </a>
+              <a href="/admin/accounts">
+                <li class="list-unstyled m-2">Account setting</li>
+              </a>
             </ul>
           </div>
         </div>
-        <div class="col-md-9 p-2">
-          <div style="height: 570px;" class="p-3 bg-white shadow-sm">
-            <span class="badge badge-secondary p-2">
-              Registration
-            </span>
-            <div>
-              <ul class="p-0 custom-tab">
-                <li class="custom-tab-item">New registrations</li>
-                <li class="custom-tab-item">Confirmed</li>
-                <li class="custom-tab-item">Rejected</li>
-              </ul>
+        <div class="col-md-10 p-2">
+          <div style="height: 570px" class="p-3 bg-white shadow-sm">
+            <span class="badge badge-secondary p-2">Dashboard</span>
+
+            <h5>Received applications</h5>
+            <hr />
+            <div class="d-flex flex-row justify-content-around">
+              <div class="shadow-sm px-3 py-2 m-2 w-25 bg-secondary">
+                <div class="d-flex justify-content-between">
+                  <h5 class="text-white">Total</h5>
+                  <h3 class="text-white">140</h3>
+                </div>
+                <p class="text-white">View all</p>
+              </div>
+              <div class="shadow-sm px-3 py-2 m-2 w-25 bg-secondary">
+                <div class="d-flex justify-content-between">
+                  <h5 class="text-white">Commandery</h5>
+                  <h3 class="text-white">140</h3>
+                </div>
+                <p class="text-white">View all</p>
+              </div>
+              <div class="shadow-sm px-3 py-2 m-2 w-25 bg-secondary">
+                <div class="d-flex justify-content-between">
+                  <h5 class="text-white">Auxiliary</h5>
+                  <h3 class="text-white">140</h3>
+                </div>
+                <p class="text-white">View all</p>
+              </div>
             </div>
-            <div>
-              <table id="summary-table-commandery" class="bg-white">
-                <thead>
-                  <tr>
-                    <th>Title</th>
-                    <th>Other names</th>
-                    <th>Registration ID</th>
-                    <th>Surname</th>
-                    <th>Parish</th>
-                    <th>Commandery number</th>
-                    <th>Date of birth</th>
-                    <th>Place of birth</th>
-                    <th>Telephone</th>
-                    <th>Email</th>
-                    <th>Region</th>
-                  </tr>
-                </thead>
-                <tbody></tbody>
-              </table>
+            <div class="row">
+              <div class="col-md-6">
+                <h5>Commandery summary</h5>
+                <hr />
+                <div class="d-flex flex-wrap">
+                  <div
+                    class="shadow p-3 m-2 bg-warning w-100 d-flex justify-content-between"
+                  >
+                    <h5 class="text-white">Pending Approval</h5>
+                    <h4 class="text-white">140</h4>
+                  </div>
+                  <div
+                    class="shadow p-3 m-2 bg-white w-100 d-flex justify-content-between"
+                  >
+                    <h5 class="text-success">Confirmed</h5>
+                    <h4 class="">140</h4>
+                  </div>
+                  <div
+                    class="shadow p-3 m-2 bg-white w-100 d-flex justify-content-between"
+                  >
+                    <h5 class="text-danger">Cancelled</h5>
+                    <h4 class="">140</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <h5>Auxiliary summary</h5>
+                <hr />
+                <div class="d-flex flex-wrap">
+                  <div
+                    class="shadow p-3 m-2 bg-warning w-100 d-flex justify-content-between"
+                  >
+                    <h5 class="text-white">Pending Approval</h5>
+                    <h4 class="text-white">140</h4>
+                  </div>
+                  <div
+                    class="shadow p-3 m-2 bg-white w-100 d-flex justify-content-between"
+                  >
+                    <h5 class="text-success">Confirmed</h5>
+                    <h4 class="">140</h4>
+                  </div>
+                  <div
+                    class="shadow p-3 m-2 bg-white w-100 d-flex justify-content-between"
+                  >
+                    <h5 class="text-danger">Cancelled</h5>
+                    <h4 class="">140</h4>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

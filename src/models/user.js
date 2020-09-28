@@ -2,23 +2,20 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-const userSchema = new Schema(
-  {
-    registrationId: String,
-    email: String,
-    userType: {
-      type: String,
-      enum: ['COMMANDERY', 'AUXILIARY'],
-    },
-    registrationStatus: {
-      type: String,
-      enum: ['REGISTERED', 'PENDING_APPROVAL', 'REJECTED'],
-      default: 'PENDING_APPROVAL',
-    },
+const userSchema = new Schema({
+  membershipNumber: {
+    type: String,
+    required: true,
   },
-  {
-    timestamps: true,
+  membershipType: {
+    type: String,
+    enum: ['commandery', 'auxiliary'],
+    required: true,
   },
-);
+  email: {
+    type: String,
+    required: true,
+  },
+});
 
-module.exports = mongoose.model('User', userSchema);
+module.exports = mongoose.models.User || mongoose.model('User', userSchema);

@@ -1,9 +1,3 @@
-$(document).ready(function () {
-  $('#summary-table-auxiliary').DataTable();
-});
-$(document).ready(function () {
-  $('#summary-table-commandery').DataTable();
-});
 $('#submission-btn-commandery').click(function () {
   $('#commandery_idMod').text($('#commandery_id').val());
   $('#titleMod').text($('#title').val());
