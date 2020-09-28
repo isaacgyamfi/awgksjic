@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const fileUpload = require('express-fileupload');
 const bodyParser = require('body-parser');
-const session = require('express-session');
+const mongoose = require('mongoose');
 require('dotenv').config();
 
 const app = express();
@@ -24,6 +24,14 @@ app.use(homeRoutes);
 app.use(memberRoutes);
 app.use(adminRoutes);
 
-app.listen(port, () => {
-  console.log(`App is running on http://localhost:${port}`);
-});
+mongoose
+  .connect(process.env.MONOGO_DB_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    app.listen(port, () => {
+      console.log(`App is running on http://localhost:${port}`);
+    });
+  })
+  .catch((err) => console.log(err));
