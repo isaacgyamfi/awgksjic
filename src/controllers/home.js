@@ -14,7 +14,7 @@ module.exports = {
   },
   postLogin: (req, res) => {
     const registrationId = req.body.registrationId;
-    const password = req.body.password;
+    const email = req.body.email;
     const membershipType = req.body.membershipType;
 
     if (membershipType == 'Commandery') {
@@ -25,5 +25,8 @@ module.exports = {
   },
   getHistory: (req, res) => {
     res.render('history');
+  },
+  getRegiment: (req, res) => {
+    res.render('regiment');
   },
 };
