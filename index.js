@@ -3,6 +3,9 @@ const path = require('path');
 const fileUpload = require('express-fileupload');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const session = require('express-session');
+const MongoDBStore = require('connect-mongodb-session')(session);
+
 require('dotenv').config();
 
 const app = express();
@@ -19,6 +22,20 @@ app.use(bodyParser.json());
 app.use(express.json());
 app.use(fileUpload());
 app.use(express.static(path.join(__dirname, 'public')));
+
+const store = new MongoDBStore({
+  uri: process.env.MONOGO_DB_URL,
+  collection: 'sessions',
+});
+
+app.use(
+  session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false,
+    store: store,
+  }),
+);
 
 app.use(homeRoutes);
 app.use(memberRoutes);

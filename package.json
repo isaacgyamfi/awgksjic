@@ -20,10 +20,12 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "bootstrap": "^4.3.1",
+    "connect-mongodb-session": "^2.4.1",
     "dotenv": "^8.2.0",
     "ejs": "^2.6.1",
     "express": "^4.17.0",
     "express-fileupload": "^1.1.6",
+    "express-session": "^1.17.1",
     "jquery": "^3.4.1",
     "mongoose": "^5.10.7",
     "pdfmake": "^0.1.57"

@@ -9,14 +9,12 @@ module.exports = {
     res.render('commandery', {
       pageTitle: 'Commandery registration',
       path: '/commandery',
-      registrationId: req.session.registrationId,
     });
   },
   getAuxiliaryPage: (req, res) => {
     res.render('auxiliary', {
       pageTitle: 'Auxiliary registration',
       path: '/auxiliary',
-      registrationId: req.session.registrationId,
     });
   },
   saveDataCommandery: (req, res) => {
