@@ -10,7 +10,7 @@ const app = express();
 const homeRoutes = require('./src/routes/home');
 const memberRoutes = require('./src/routes/member');
 const adminRoutes = require('./src/routes/admin');
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 
 app.set('view engine', 'ejs');
 app.set('views', 'src/views');
